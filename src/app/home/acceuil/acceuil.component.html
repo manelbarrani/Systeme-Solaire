@@ -1,0 +1,18 @@
+<div class="series-container">
+  <div class="series-card" *ngFor="let serie of series" (mouseover)="showDetails(serie)" (mouseleave)="hideDetails()">
+    <img [src]="serie.image" alt="Image de série" class="series-image" />
+    <div class="series-info">
+      <h3>{{ serie.title }}</h3>
+      <p>Episode {{ serie.episode }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Detailed view -->
+<div *ngIf="selectedSerie" class="details-modal">
+  <div class="details-content">
+    <img [src]="selectedSerie.image" alt="Image de série" class="details-image" />
+    <h2>{{ selectedSerie.title }}</h2>
+    <p>{{ selectedSerie.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="translated-series">
+    <h1> مسلسلات مدبلجة</h1>
+    <div class="series-list">
+      <div class="series-card" *ngFor="let series of translatedSeries" (mouseover)="showDetails(series)" (mouseleave)="hideDetails(series)">
+        <img [src]="series.imageUrl" [alt]="series.title" />
+        <div class="card-content">
+          <h3>{{ series.title }}</h3>
+        </div>
+        <div class="series-details" *ngIf="series.showDetailsFlag">
+          <div class="rating">
+            <span *ngFor="let star of getStarsArray(series.rating)">&#9733;</span>
+          </div>
+          <div class="episodes">Episodes: {{ series.episodes }}</div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="channels">
+  <div class="channel-card" *ngFor="let channel of channels" (mouseover)="showDetails(channel)" (mouseleave)="hideDetails()">
+    <img [src]="channel.imageUrl" [alt]="channel.name">
+    <div class="channel-name">{{ channel.name }}</div>
+  </div>
+</div>
+
+<div class="channel-detail-card" *ngIf="selectedChannel">
+  <h2>{{ selectedChannel.name }}</h2>
+  <h3>Movies:</h3>
+  <ul>
+    <li *ngFor="let movie of selectedChannel.movies">{{ movie }}</li>
+  </ul>
+  <h3>Series:</h3>
+  <ul>
+    <li *ngFor="let series of selectedChannel.series">{{ series }}</li>
+  </ul>
+</div>
+

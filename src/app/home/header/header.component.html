@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="navbar">
+  <div class="menu">
+    <span class="navbar-brand">قصة عشق</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="navbar-toggler" aria-label="Toggle navigation" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <div class="navbar-nav" [class.collapsed]="isMenuCollapsed">
+      <a mat-button class="nav-link" routerLink=''>احدث الحلقات</a>
+      <a mat-button class="nav-link" routerLink='seriesmot'>مسلسلات مترجمة</a>
+      <a mat-button class="nav-link" routerLink='seriesmod'>مسلسلات مدبلجة</a>
+      <a mat-button class="nav-link" routerLink='episodes'>افلام</a>
+      <a mat-button class="nav-link" routerLink='actor'>افضل الممثلين</a>
+      <a mat-button class="nav-link" routerLink='tv'>القنوات</a>
+      <a mat-button class="nav-link" routerLink='terms'>Terms and Conditions</a>
+      <a mat-button class="nav-link" routerLink='contacts'>contact us</a>
+      <a mat-button class="nav-link" routerLink='privacy'>Privacy Policy</a>
+      <a mat-icon-button class="nav-link" (click)="authService.logout()">
+        <mat-icon>logout</mat-icon>
+      </a>
+      <a mat-icon-button class="nav-link" routerLink="/"><mat-icon>account_circle</mat-icon></a>
+      <a mat-icon-button class="nav-link" routerLink="/"><mat-icon>search</mat-icon></a>
+    </div>
+  </div>
+</mat-toolbar>
+
+<div class="section-title">
+  <router-outlet></router-outlet>
+</div>

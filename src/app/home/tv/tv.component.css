@@ -1,0 +1,63 @@
+.channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .channel-card {
+    width: 250px; /* Increase the size */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px 20px; /* Ensure even spacing */
+  }
+  
+  .channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .channel-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .channel-name {
+    padding: 10px;
+    font-size: 20px; /* Larger font for better visibility */
+    color: #333;
+  }
+  
+  .channel-detail-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .channel-detail-card h2, .channel-detail-card h3 {
+    margin-top: 10px;
+  }
+  
+  .channel-detail-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .channel-detail-card li {
+    margin-bottom: 5px;
+  }
+  

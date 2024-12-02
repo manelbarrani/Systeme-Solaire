@@ -1,0 +1,29 @@
+
+
+<div class="actors-container">
+    <div
+      class="actor-card"
+      *ngFor="let actor of actors"
+      (mouseover)="hoveredActor = actor"
+      (mouseleave)="hoveredActor = null"
+    >
+      <!-- Actor Image -->
+      <img
+        [src]="actor.image"
+        [alt]="actor.name"
+        class="actor-image"
+        [class.hover]="hoveredActor === actor"
+      />
+  
+      <!-- Information to show on hover -->
+      <div class="actor-info" *ngIf="hoveredActor === actor">
+        <h3>{{ actor.name }}</h3>
+        <p>Age: {{ actor.age }}</p>
+        <h4>Series:</h4>
+        <ul>
+          <li *ngFor="let series of actor.series">{{ series }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

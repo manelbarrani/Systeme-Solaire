@@ -1,0 +1,61 @@
+.series-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.series-card {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.series-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.series-image {
+  width: 100%;
+  height: auto;
+}
+
+.series-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.series-info h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.details-content {
+  position: relative;
+}
+
+.details-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}

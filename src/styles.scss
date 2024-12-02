@@ -1,22 +1,14 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use "@angular/material" as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
+@use "@angular/material" as mat;
+
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 $angularstart-chat-primary: mat.define-palette(mat.$orange-palette);
 $angularstart-chat-accent: mat.define-palette(
   mat.$blue-gray-palette,
-  700,
-  800,
-  900
+  900,
+  100,
+  100
 );
 
 // The warn palette is optional (defaults to red).
@@ -60,7 +52,7 @@ $accent-darker: mat.get-color-from-palette($angularstart-chat-accent, darker);
   --accent-darker-color: #{$accent-darker};
 
   // custom
-  --white: #ecf0f1;
+  --white: #d82121;
 }
 
 html,
@@ -83,9 +75,9 @@ body {
   position: relative;
   background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(5, 10, 20, 1) 50%,
-      rgba(0, 0, 0, 1)
+      rgb(92, 2, 2),
+      rgb(0, 0, 0) 50%,
+      rgb(92, 2, 2)
     ),
     url('https://source.unsplash.com/1600x900/?galaxy,space,stars');
   background-size: cover;
@@ -103,9 +95,9 @@ body {
   left: 0;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(200, 200, 255, 0.4) 2px, transparent 3px)
+  background: radial-gradient(circle, rgba(245, 245, 248, 0.215) 2px, transparent 3px)
     10px 10px,
-    radial-gradient(circle, rgba(200, 200, 255, 0.3) 1px, transparent 2px)
+    radial-gradient(circle, rgba(251, 251, 251, 0.36) 1px, transparent 2px)
     30px 30px;
   background-size: 50px 50px;
   opacity: 0.4;
